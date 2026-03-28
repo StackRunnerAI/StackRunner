@@ -137,3 +137,17 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# local editor files
+.vscode/
+.idea/
+.DS_Store
+
+# local state / sqlite
+*.sqlite
+*.db
+*.db-journal
+
+# temp
+.tmp/
+temp/
