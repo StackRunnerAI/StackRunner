@@ -1,0 +1,35 @@
+{
+  "name": "stackrunner-spec",
+  "version": "0.1.0",
+  "description": "Open spec for governed, verifiable, durable agent execution across external services.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "agents",
+    "automation",
+    "durable-execution",
+    "governance",
+    "specification",
+    "verification"
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
