@@ -1,0 +1,13 @@
+{
+  "name": "stackrunner",
+  "private": true,
+  "workspaces": [
+    "stackrunner-spec",
+    "stackrunner-reference-runtime"
+  ],
+  "scripts": {
+    "build": "npm run build -w stackrunner-spec && npm run build -w stackrunner-reference-runtime",
+    "check": "npm run check -w stackrunner-spec && npm run build -w stackrunner-spec && npm run check -w stackrunner-reference-runtime",
+    "demo": "npm run demo -w stackrunner-reference-runtime --"
+  }
+}

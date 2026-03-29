@@ -7,6 +7,7 @@ import type {
   RetryPolicy,
   TimeoutPolicy
 } from "./common.js";
+import type { CompensationDefinition } from "./rollback.js";
 
 export type StepFailureStrategy = "halt" | "rollback" | "continue";
 
@@ -22,6 +23,7 @@ export interface RunbookStep {
   on_failure?: StepFailureStrategy;
   emit_artifacts?: ArtifactDescriptor[];
   checkpoint?: CheckpointPolicy;
+  compensation?: CompensationDefinition;
 }
 
 export interface Runbook {

@@ -1,0 +1,24 @@
+{
+  "name": "stackrunner-reference-runtime",
+  "version": "0.1.0",
+  "description": "Reference runtime and CLI for executing StackRunner spec examples.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "stackrunner-demo": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "demo": "node ./dist/cli.js"
+  },
+  "dependencies": {
+    "stackrunner-spec": "file:../stackrunner-spec"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.2"
+  }
+}

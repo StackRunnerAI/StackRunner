@@ -3,6 +3,7 @@ import type { Capability } from "./capability.js";
 import type { Checkpoint } from "./checkpoint.js";
 import type { CapabilityCategory, CapabilityName } from "./common.js";
 import type { Execution } from "./execution.js";
+import type { AgentIdentity } from "./identity.js";
 import type { Runbook, RunbookStep } from "./runbook.js";
 import type { VerificationResult } from "./verification.js";
 
@@ -39,10 +40,11 @@ export interface RollbackResult {
 }
 
 export interface StepContext {
-  execution: Pick<Execution, "id" | "status" | "inputs" | "artifacts" | "checkpoints">;
+  execution: Pick<Execution, "id" | "status" | "inputs" | "artifacts" | "checkpoints" | "events">;
   runbook: Runbook;
   step: RunbookStep;
   capability: Capability;
+  actor?: AgentIdentity;
   attempt: number;
   resolved_input: Record<string, unknown>;
   prior_artifacts: Artifact[];
